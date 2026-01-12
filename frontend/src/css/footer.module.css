@@ -30,6 +30,7 @@
 .brand span{
     color: rgb(237, 255, 79);
     font-weight: 700;
+
 }
 
 .links h3,
@@ -96,5 +97,8 @@
   .links ul li,
   .sociallink .icons {
     justify-content: center;
+  }
+  .brand span{
+    font-size: 1.1rem;
   }
 }

@@ -74,7 +74,7 @@ export default function Carousel({ children }) {
     return (
         <div className={styles.caouselcontainer}>
 
-           
+            
             <div className={styles.imagebox} ref={CarouselBoxRef}>
                 {children}
             </div>
