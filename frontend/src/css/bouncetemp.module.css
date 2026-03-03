@@ -1,7 +1,7 @@
 .container {
     width: 50rem;
     height: 30rem;
-    border: 5px solid rgb(248, 61, 61);
+    /* border: 5px solid rgb(248, 61, 61); */
     position: fixed;
     top: 55%;
     left: 50%;
@@ -12,7 +12,11 @@
     align-items: center;
     background-color: aliceblue;
     padding-bottom: 30px;
-
+    background-color: #ffffff;
+    /* margin: 13px 10px;
+    padding: 15px; */
+    border-radius: 10px;
+    box-shadow: 1px 1px 4px 2px #ECECEC;
 }
 
 .main {
@@ -22,6 +26,8 @@
     background-color: aqua;
     position: relative;
     object-fit: cover;
+
+    box-shadow: 0px 0px 2px 2px #ECECEC;
     
 
 
