@@ -1,24 +1,8 @@
 import styles from '../../css/schResultsUpdate/topperStd.module.css';
-import htp from '../../assets/Images/htp.jpg';
-import itp from '../../assets/Images/itp.jpg';
-function TopperStd({ data }) {
 
-    const topperStdDetails = [
-        {
-            name: "Skashi",
-            per: 98,
-            rank: 1,
-            disRank: 1,
-            url: { itp }
-        },
-        {
-            name: `KHUSHI SAHU`,
-            per: 97,
-            rank: 2,
-            disRank: 3,
-            url: { htp }
-        }
-    ];
+
+
+function TopperStd({ data }) {
 
     const linkdata = [
         {
@@ -35,70 +19,99 @@ function TopperStd({ data }) {
         }
     ]
 
-
-
     return (
         <div className={styles.container}>
+
+            {/* Topper Section */}
+
             <div className={styles.section}>
                 <div className={styles.title}>
                     <span>SVN TOPPER</span>
                 </div>
+
                 <div className={styles.SectionSubTitleBox}>
-                    {data.map((item) => (
-                        <div className={styles.topperStdContent}>
+
+                    {data.map((item, index) => (
+                        <div key={index} className={styles.topperStdContent}>
 
                             <div className={styles.sectionSubTitle}>
                                 <span>{item.SubTitle}</span>
                             </div>
-                            <div className={styles.stdImgSection}>
-                                <div className={`${styles.imgbox} ${styles.stdbox}`}>
-                                    <img src={htp} alt="image not found" />
-                                </div>
-                                <div className={`${styles.stdDetails} ${styles.stdbox}`}>
-                                    <table className={styles.stdTable}>
-                                        {topperStdDetails.map((items) =>
-                                        (
-                                            <>
+
+                            {item.toppers.map((std, i) => (
+
+                                <div key={i} className={styles.stdImgSection}>
+
+                                    <div className={`${styles.imgbox} ${styles.stdbox}`}>
+                                        <img src={std.url} alt={std.name} />
+                                    </div>
+
+                                    <div className={`${styles.stdDetails} ${styles.stdbox}`}>
+                                        <table className={styles.stdTable}  width="100%">
+                                            <tbody>
+
                                                 <tr>
                                                     <td>Name</td>
-                                                    <td>{items.name}</td>
+                                                    <td>:</td>
+                                                    <td>{std.name}</td>
                                                 </tr>
-                                                
-                                            </>
-                                        ))}
 
-                                    </table>
+                                                <tr>
+                                                    <td>Percentage</td>
+                                                    <td>:</td>
+                                                    <td>{std.per}%</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>Rank</td>
+                                                    <td>:</td>
+                                                    <td>{std.rank}</td>
+                                                </tr>
+
+                                                <tr>
+                                                    <td>District Rank</td>
+                                                    <td>:</td>
+                                                    <td>{std.disRank}</td>
+                                                </tr>
+
+                                            </tbody>
+                                        </table>
+                                    </div>
+
                                 </div>
-                            </div>
 
-
+                            ))}
 
                         </div>
                     ))}
+
                 </div>
             </div>
+
+
+            {/* Latest News */}
+
             <div className={styles.latestNewsSection}>
                 <div className={styles.title}>
                     <span>Latest News</span>
                 </div>
+
                 <div className={styles.latestNewsSectionContent}>
                     <div className={styles.linkContent}>
-                        {linkdata.map((item, index) =>
-                        (
-                            <div className={styles.newsLinkChildSection}>
+
+                        {linkdata.map((item, index) => (
+                            <div key={index} className={styles.newsLinkChildSection}>
                                 <div className={styles.NewsBullet}></div>
                                 <div className={styles.Line}></div>
-                                <div className={styles.newsContent}></div>
-                                <span key={index}>{item.content}</span>
+                                <span>{item.content}</span>
                             </div>
                         ))}
 
                     </div>
                 </div>
             </div>
+
         </div>
-
-
     )
 }
 

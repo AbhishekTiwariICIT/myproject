@@ -11,7 +11,8 @@ import pic3 from '../assets/Images/pic3.jpg';
 import pic4 from '../assets/Images/pic4.jpg';
 import messageimg from '../assets/Images/img.jpeg';
 import TopperStd from './schResultsUpdate/TopperStd.jsx';
-
+import htp from '../assets/Images/htp.jpg';
+import itp from '../assets/Images/itp.jpg';
 export default function HomePageSlider() {
 
     /* const boxes = [
@@ -22,74 +23,81 @@ export default function HomePageSlider() {
     ]; */
 
     const sections = [
-  {
-    id: 1,
-    title: <>1<sup>st</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
-    boxes: [
-      { id: 1, className: "Class VI", link: "/vi-result-1", isNew: true },
-      { id: 2, className: "Class VII", link: "/vii-result-1", isNew: false },
-      { id: 3, className: "Class VIII", link: "/viii-result-1", isNew: true },
-      { id: 4, className: "Class IX", link: "/ix-result-1", isNew: false }
-    ]
-  },
-  {
-    id: 2,
-    title: <>2<sup>nd</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
-    boxes: [
-      { id: 1, className: "Class VI", link: "/vi-result-2", isNew: false },
-      { id: 2, className: "Class VII", link: "/vii-result-2", isNew: true },
-      { id: 3, className: "Class VIII", link: "/viii-result-2", isNew: false },
-      { id: 4, className: "Class IX", link: "/ix-result-2", isNew: false }
-    ]
-  },
-  {
-    id: 3,
-    title: <>3<sup>rd</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
-    boxes: [
-      { id: 1, className: "Class VI", link: "/vi-result-3", isNew: false },
-      { id: 2, className: "Class VII", link: "/vii-result-3", isNew: false },
-      { id: 3, className: "Class VIII", link: "/viii-result-3", isNew: true },
-      { id: 4, className: "Class IX", link: "/ix-result-3", isNew: false }
-    ]
-  },
-  {
-    id: 4,
-    title: <>4<sup>th</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
-    boxes: [
-      { id: 1, className: "Class VI", link: "/vi-result-4", isNew: false },
-      { id: 2, className: "Class VII", link: "/vii-result-4", isNew: false },
-      { id: 3, className: "Class VIII", link: "/viii-result-4", isNew: false },
-      { id: 4, className: "Class IX", link: "/ix-result-4", isNew: true }
-    ]
-  }
-];
+        {
+            id: 1,
+            title: <>1<sup>st</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
+            boxes: [
+                { id: 1, className: "Class VI", link: "/vi-result-1", isNew: true },
+                { id: 2, className: "Class VII", link: "/vii-result-1", isNew: false },
+                { id: 3, className: "Class VIII", link: "/viii-result-1", isNew: true },
+                { id: 4, className: "Class IX", link: "/ix-result-1", isNew: false }
+            ]
+        },
+        {
+            id: 2,
+            title: <>2<sup>nd</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
+            boxes: [
+                { id: 1, className: "Class VI", link: "/vi-result-2", isNew: false },
+                { id: 2, className: "Class VII", link: "/vii-result-2", isNew: true },
+                { id: 3, className: "Class VIII", link: "/viii-result-2", isNew: false },
+                { id: 4, className: "Class IX", link: "/ix-result-2", isNew: false }
+            ]
+        },
+        {
+            id: 3,
+            title: <>3<sup>rd</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
+            boxes: [
+                { id: 1, className: "Class VI", link: "/vi-result-3", isNew: false },
+                { id: 2, className: "Class VII", link: "/vii-result-3", isNew: false },
+                { id: 3, className: "Class VIII", link: "/viii-result-3", isNew: true },
+                { id: 4, className: "Class IX", link: "/ix-result-3", isNew: false }
+            ]
+        },
+        {
+            id: 4,
+            title: <>4<sup>th</sup> PHASE ENTRANCE EXAM RESULTS 2025</>,
+            boxes: [
+                { id: 1, className: "Class VI", link: "/vi-result-4", isNew: false },
+                { id: 2, className: "Class VII", link: "/vii-result-4", isNew: false },
+                { id: 3, className: "Class VIII", link: "/viii-result-4", isNew: false },
+                { id: 4, className: "Class IX", link: "/ix-result-4", isNew: true }
+            ]
+        }
+    ];
 
-const topperStdData=[
-    {
-        Id:1,
+    
+
+
+    const data = [
+        {
+            SubTitle: "Class 10 Topper",
+            toppers: [
+                {
+                    name: "Sakshi",
+                    per: 98,
+                    rank: 1,
+                    disRank: 1,
+                    url:htp
+                   
+                }
+              
+            ]
+        },
+        {
+            SubTitle: "Class 12 Topper",
+            toppers: [
+                {
+                    name: "Rahul",
+                    per: 96,
+                    rank: 1,
+                    disRank: 2,
+                    url:itp
         
-        SubTitle:"Intermediate Topper",
-        Name:"Sakshi",
-        Per:"96",
-        RollNo:" ",
-        CollegeRank:"01",
-        DistrictRank:"03"
+                }
+            ]
+        }
+    ];
 
-
-    },
-    {
-        Id:2,
-        
-        SubTitle:"High School Topper",
-        Name:"KHUSHI SAHU",
-        Per:"95",
-        RollNo:" ",
-        CollegeRank:"01",
-        DistrictRank:"01"
-
-
-    }
-]
 
     const [showPopup, setShowPopup] = useState(false);
     useEffect(() => {
@@ -128,15 +136,12 @@ const topperStdData=[
             {sections.map((item) => (
                 <SectionCard key={item.id} data={item} />
             ))}
-            
 
-            
-         {/*    {topperStdData.map((item)=>(
 
-            <TopperStd key={item.Id} data={item}/>
-            ))} */}
 
-            <TopperStd data={topperStdData} />
+
+
+            <TopperStd data={data} />
         </>
 
 
