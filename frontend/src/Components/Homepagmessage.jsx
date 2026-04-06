@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import styles from '../css/Homepagemessage.module.css';
+/* import { useState } from 'react';
+// import styles from '../css/Homepagemessage.module.css';
 
 
 
@@ -77,4 +77,4 @@ export function Homepagemessage(props) {
 
 
     )
-}
+} */

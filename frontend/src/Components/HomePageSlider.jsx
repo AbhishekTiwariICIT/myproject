@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Message from './MessageCard/Message';
 import Carousel from './Carousel';
 import SectionCard from '../Components/schResultsUpdate/SectionCard.jsx';
-import { Homepagemessage } from './Homepagmessage';
+
 import Bouncetemp from './Bounncetem';
 import PIC1 from '../assets/Images/PIC1.jpg';
 import pic2 from '../assets/Images/pic2.jpg';
